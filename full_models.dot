@@ -1,0 +1,8 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true, bgcolor="none"]
+	"User" [shape=Mrecord, label="{User|id :INTEGER\lemail :varchar\lencrypted_password :varchar\lreset_password_token :varchar\lreset_password_sent_at :datetime\lremember_created_at :datetime\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"ApplicationRecord" []
+	"Movie" [shape=Mrecord, label="{Movie|id :INTEGER\ltitle :varchar\ldescription :text\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"ApplicationRecord" -> "User" [label="", arrowhead="none", arrowtail="onormal"]
+	"ApplicationRecord" -> "Movie" [label="", arrowhead="none", arrowtail="onormal"]
+}
