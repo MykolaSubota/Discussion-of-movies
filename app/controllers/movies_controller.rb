@@ -1,5 +1,8 @@
 class MoviesController < ApplicationController
 	
+	before_action :authenticate_user!, exept: [:index, :show]
+
+
 	before_action :set_movie, only: [ :show, :edit, :update]
 
 
@@ -33,6 +36,7 @@ class MoviesController < ApplicationController
 			
 		end
 	end
+	
 
 private
 

@@ -3,6 +3,9 @@ digraph models_diagram {
 	"User" [shape=Mrecord, label="{User|id :INTEGER\lemail :varchar\lencrypted_password :varchar\lreset_password_token :varchar\lreset_password_sent_at :datetime\lremember_created_at :datetime\lcreated_at :datetime\lupdated_at :datetime\l}"]
 	"ApplicationRecord" []
 	"Movie" [shape=Mrecord, label="{Movie|id :INTEGER\ltitle :varchar\ldescription :text\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"Impression" [shape=Mrecord, label="{Impression|id :INTEGER\lbody :text\lmovie_id :integer\lcreated_at :datetime\lupdated_at :datetime\l}"]
 	"ApplicationRecord" -> "User" [label="", arrowhead="none", arrowtail="onormal"]
+	"Movie" -> "Impression" [arrowtail=odot, arrowhead=crow, dir=both color="#3C0D6A"]
 	"ApplicationRecord" -> "Movie" [label="", arrowhead="none", arrowtail="onormal"]
+	"ApplicationRecord" -> "Impression" [label="", arrowhead="none", arrowtail="onormal"]
 }
