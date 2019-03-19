@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 gem 'activeadmin'
+gem "paperclip", "~> 6.0.0"
+gem 'carrierwave', '~> 1.0'
 
 group :development, :test do
     gem 'railroady'
