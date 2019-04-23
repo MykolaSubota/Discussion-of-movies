@@ -1,21 +1,20 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-expand-sm">
-    <a class="navbar-brand" href="#">
-   <div class ="row">
-    <ul class="navbar-nav ml-auto ">
+<nav class="navbar navbar-expand-sm bg-dark navbar-expand-sm my-2 my-md-0">
+      <ul class="navbar-nav mr-auto">
        <%= link_to movies_path, class: "nav-link " do%>
-        <i class="fas nav-link active-primary fa-sign-in-alt ">All movies</i> 
+        <i  class="fas nav-link active-primary fa-sign-in-alt ">All movies</i> 
       <% end %>
       
-      <%= link_to new_movie_path,class: "nav-link" do %>
+      <%= link_to new_movie_path,class: "nav-link " do %>
        <% if user_signed_in? %>
-          <i class="fas nav-link active fa-user">Add new movie</i> 
+          <i class="fas nav-link active fa-user ">Add new movie</i> 
         <% end %>
-        </div>
+        </ul>
         <% if user_signed_in? %>
-        <%= link_to destroy_user_session_path,class: "nav-link" , method: :delete do %>
-          <i class="btn btn-outline-primary text-light">Log Out</i> 
+      
+        <%= link_to destroy_user_session_path, class: "nav-link my-2 my-md-0" , method: :delete do %>
+          <i  class="btn btn-outline-primary text-light">Log Out</i> 
         <% end %>
-     </a>
+     
       <% else %>  
 
       <%= link_to new_user_session_path, class: "nav-link" do %>
@@ -23,9 +22,10 @@
       <%  end %>
       <%= link_to new_user_registration_path, class: "nav-link" do%>
       <i class="btn btn-outline-primary">Sign Up</i>
+      
       <%  end %>
       <%  end %>
 
 <% end %>
-    </ul>
+    
 </nav>
