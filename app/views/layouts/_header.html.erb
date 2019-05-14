@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-expand-sm my-2 my-md-0">
+      <ul class="navbar-nav mr-auto">
+       <%= link_to movies_path, class: "nav-link " do%>
+        <i  class="fas nav-link active-primary fa-sign-in-alt ">All movies</i> 
+      <% end %>
+      
+      <%= link_to new_movie_path,class: "nav-link " do %>
+       <% if user_signed_in? %>
+          <i class="fas nav-link active fa-user ">Add new movie</i> 
+        <% end %>
+        </ul>
+        <% if user_signed_in? %>
+      
+        <%= link_to destroy_user_session_path, class: "nav-link my-2 my-md-0" , method: :delete do %>
+          <i  class="btn btn-outline-primary text-light">Log Out</i> 
+        <% end %>
+     
+      <% else %>  
+
+      <%= link_to new_user_session_path, class: "nav-link" do %>
+      <i class="btn btn-outline-primary">Log In</i>
+      <%  end %>
+      <%= link_to new_user_registration_path, class: "nav-link" do%>
+      <i class="btn btn-outline-primary">Sign Up</i>
+      
+      <%  end %>
+      <%  end %>
+
+<% end %>
+    
+</nav>
