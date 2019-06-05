@@ -12,15 +12,18 @@
         <% if user_signed_in? %>
       
         <%= link_to destroy_user_session_path, class: "nav-link my-2 my-md-0" , method: :delete do %>
-          <i  class="btn btn-outline-primary text-light">Log Out</i> 
+          <i  class="btn btn-outline-primary text-light">
+          <%= show_svg('logout.svg') %>Log Out</i> 
         <% end %>
      
       <% else %>  
       <%= link_to new_user_session_path, class: "nav-link" do %>
-      <i class="btn btn-outline-primary">Log In</i>
+      <i class="btn btn-outline-primary">
+      <%= show_svg('users.svg') %>Log In</i>
       <%  end %>
       <%= link_to new_user_registration_path, class: "nav-link" do%>
-      <i class="btn btn-outline-primary">Sign Up</i>
+      <i class="btn btn-outline-primary">
+      <%= show_svg('user.svg') %>Sign Up</i>
       
       <%  end %>
       <%  end %>
