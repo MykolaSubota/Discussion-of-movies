@@ -1,0 +1,11 @@
+ua:
+  header:
+    main: "Всі фільми"
+    logout: "Вихід"
+    login: "Увійти"
+    signup: "Зареєструватися"
+  body:
+    discussions: "Всі відгуки"
+    opinion: "Додати відгук"
+    ur_opinion: "Ваш відгук про фільм"
+    movie: "Фільми"

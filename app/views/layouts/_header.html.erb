@@ -2,23 +2,23 @@
 
   <ul class="navbar-nav mr-auto">
     <%= link_to movies_path, class: "nav-link " do%>
-      <i  class="fas nav-link active-primary fa-sign-in-alt ">All movies</i> 
+      <i  class="fas nav-link active-primary fa-sign-in-alt "><%= t "header.main"%></i> 
     <% end %>
   </ul>
-
+  <%= link_to_unless_current "EN" , locale: "en"%>|<%= link_to_unless_current "UA" , locale: "ua"%>
   <% if user_signed_in? %>
     <%= link_to destroy_user_session_path, class: "nav-link my-2 my-md-0" , method: :delete do %>
       <i  class="btn btn-outline-primary text-light">
-      <%= show_svg('logout.svg') %>Log Out</i> 
+      <%= show_svg('logout.svg') %><%= t "header.logout"%></i> 
     <% end %>
   <% else %>  
     <%= link_to new_user_session_path, class: "nav-link" do %>
       <i class="btn btn-outline-primary">
-      <%= show_svg('users.svg') %>Log In</i>
+      <%= show_svg('users.svg') %><%= t "header.login"%></i>
     <%  end %>
       <%= link_to new_user_registration_path, class: "nav-link" do%>
         <i class="btn btn-outline-primary">
-        <%= show_svg('user.svg') %>Sign Up</i>
+        <%= show_svg('user.svg') %><%= t "header.signup"%></i>
       <%  end %>
   <%  end %>
   

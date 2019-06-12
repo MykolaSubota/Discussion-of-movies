@@ -3,8 +3,13 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-root 'movies#index'
-resources :movies do
-	resources :impressions
+  scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
+	root 'movies#index'
+		resources :movies do
+		resources :impressions
+
+end  
 end
+	get '*path', to: redirect("/#{I18n.default_locale}/%{path}")
+   get '', to: redirect("/#{I18n.default_locale}")
 end

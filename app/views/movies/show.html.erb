@@ -3,17 +3,17 @@
 <p><%= @movie.genre%></p>
 <p><%= @movie.description %></p>
 <hr>
-<h2>All discussions</h2>
+<h2><%= t "body.discussions"%></h2>
 <% @movie.impressions.each do |impression| %>
 <div>
 	<p> <%= impression.body %></p>
 </div>
 <% end %>
 <hr>
-<h2>Discussion of movie</h2>
+<h2><%= t "body.opinion"%></h2>
 <%= form_for([@movie, @movie.impressions.build]) do |f| %>
 	<p>
-		Your opinion about movie<br>
+		<%= t "body.ur_opinion"%><br>
 		<%= f.text_area(:body) %>
 	</p>
 

@@ -30,4 +30,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  header:
+    main: "All Movies"
+    logout: "Log Out"
+    login: "Login"
+    signup: "Sign Up"
+  body:
+    discussions: "All discussions"
+    opinion: "Add opinion about movie"
+    ur_opinion: "Your opinion"
+    movie: "Movies"
