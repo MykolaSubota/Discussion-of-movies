@@ -105,7 +105,19 @@ ActiveAdmin.setup do |config|
   #
   # Default:
   # config.logout_link_method = :get
-
+ config.namespace :admin do |admin|
+    admin.build_menu :utility_navigation do |menu|
+      menu.add :label => "Languages" do |lang|
+        lang.add :label => "English",:url => proc { url_for(:locale => 'en') }, id: 'i18n-en', :priority => 1
+       
+      end
+      menu.add :label => proc { display_name current_active_admin_user },
+                :url => '#',
+                :id => 'current_user',
+                :if => proc { current_active_admin_user? }
+      admin.add_logout_button_to_menu menu
+    end
+  end
   # == Root
   #
   # Set the action to call for the root path. You can set different
