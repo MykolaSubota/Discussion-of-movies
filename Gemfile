@@ -36,6 +36,7 @@ gem 'bootstrap', '~> 4.3.1'
 
 gem 'devise'
 gem 'activeadmin'
+gem 'carrierwave', '~> 1.0'
 
 group :development, :test do
     gem 'railroady'
