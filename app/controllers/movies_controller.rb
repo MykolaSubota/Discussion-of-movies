@@ -45,6 +45,6 @@ def set_movie
 end
 
 def movie_params
-	params.require(:movie).permit(:title, :description, :genre, :image)
+	params.require(:movie).permit(:title, :description, :genre, :image, {movie_gallery: []})
 end
 end
