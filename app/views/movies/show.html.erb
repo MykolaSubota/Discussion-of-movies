@@ -3,6 +3,13 @@
 <%= image_tag @movie.image if @movie.image? %>
 <p><%= @movie.genre%></p>
 <p><%= @movie.description %></p>
+<% if @movie.movie_gallery? %>
+  <ul>
+    <% @movie.movie_gallery.each do |img| %>
+      <%= link_to(image_tag(img.url, alt: 'Image'), img.url, target: '_blank') %>
+    <% end %>
+  </ul>
+<% end %>
 <hr>
 <h2><%= t "body.discussions"%></h2>
 <% @movie.impressions.each do |impression| %>
