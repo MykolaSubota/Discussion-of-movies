@@ -40,10 +40,30 @@
     text-align: center;
     font-weight: 700;
     font-size: 15px;
-    background: #131415;
+    background:#1f2123;
     
 }
 #title{
 	text-decoration: none;
 	color: #9f9f9f;
+}
+#header{
+	color: #9f9f9f;
+}
+#png{
+	height: 40px;
+	width: 50px;
+}
+#nav{
+	height: 60px;
+	background-color:#263745;
+}
+#head{
+	text-decoration: none;
+}
+#body{
+	background-color:#;
+}
+#tit{
+	color:#fff;
 }
