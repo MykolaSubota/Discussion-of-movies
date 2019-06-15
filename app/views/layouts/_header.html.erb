@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-expand-sm my-2 my-md-0">
+<nav class="navbar navbar-expand-sm navbar-expand-sm h-20" id="nav">
 
   <ul class="navbar-nav mr-auto">
     <%= link_to movies_path, class: "nav-link " do%>
-      <i  class="fas nav-link active-primary fa-sign-in-alt "><%= t "header.main"%></i> 
+      <i id="i" class="fas nav-link active-primary fa-sign-in-alt "><%= image_tag 'pop.png', id:"png" %><%= t "header.main"%></i> 
     <% end %>
   </ul>
   <%= link_to_unless_current "EN" , locale: "en"%>|<%= link_to_unless_current "UA" , locale: "ua"%>

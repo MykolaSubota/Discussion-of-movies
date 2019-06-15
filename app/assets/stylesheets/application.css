@@ -17,3 +17,53 @@
 	width:500px;
 	color: #000000;
 }
+#movie{
+	margin: 10px 1% 40px;
+	width:23%;
+	display: inline-block;
+}
+#pic{
+	height:100%;  
+	width: 100%;
+}
+#main_div{
+	
+	display: inline-flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+#main_title{
+	display: block;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    background:#1f2123;
+    
+}
+#title{
+	text-decoration: none;
+	color: #9f9f9f;
+}
+#header{
+	color: #9f9f9f;
+}
+#png{
+	height: 40px;
+	width: 50px;
+}
+#nav{
+	height: 60px;
+	background-color:#263745;
+}
+#head{
+	text-decoration: none;
+}
+#body{
+	background-color:#;
+}
+#tit{
+	color:#fff;
+}
