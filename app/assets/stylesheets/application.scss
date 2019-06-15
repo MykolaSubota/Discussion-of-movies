@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-#impression_body{
-	width:500px;
-	color: #000000;
-}
+
+@import "bootstrap";	
+

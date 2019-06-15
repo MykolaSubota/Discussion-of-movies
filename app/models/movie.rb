@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
 	has_many :impressions
-	validates :title, :description, presence: true
+	validates :title, :description, :genre, presence: true
 
 end
