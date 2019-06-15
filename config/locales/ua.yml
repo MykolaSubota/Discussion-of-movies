@@ -13,4 +13,10 @@ ua:
     ur_opinion: "Ваш відгук про фільм"
     movie: "Фільми"
     add: "Додати"
-  
+    genre: "Жанр:"
+    country: "Країна:"
+    year: "Рік виходу:"
+    director: "Режисер:"
+    actors: "Актори:"
+    description: "Опис фільму:"
+    galery: "Галерея:"

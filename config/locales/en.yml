@@ -13,4 +13,12 @@ en:
     ur_opinion: "Your opinion"
     movie: "Movies"
     add: "Add"
+    genre: "Genre:"
+    country: "Country:"
+    year: "Year:"
+    director: "Director:"
+    actors: "Actors:"
+    description: "Description:"
+    galery: "Galery:"
+    developed: "Developed by:"
 

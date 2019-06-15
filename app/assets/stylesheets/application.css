@@ -83,23 +83,42 @@
     min-width: 320px;
     max-width: 1200px;
     margin: 0 auto;
+    height: 100%;
 }
 #top-info{
-	display: block;
-	height: 30%;	
-	    box-sizing: border-box;
+	display: flex;
+	height: 50%;	
+	box-sizing: border-box;
 }
 #mov{
-	display: block;
-	width: 25.7%;
+	width: 30%;
     float: left;
     background-color:#263745;
     padding: 10px;
 }
 #mov-info{
-	display: block;
-	width: 74.3%;
+	width: 70%;
+	background-color: #f0f0f0;
 }
 #desc{
 	width: 100%;
+}
+#photo{
+	
+	width: 20%;
+}
+#list{
+	display: flex;
+}
+#text{
+	padding: 15px;
+	background-color: #b3b3b3;
+}
+#text2{
+	padding: 15px;
+}
+#footer{
+	height: 100px;
+	margin-top:20px;
+	background-color:#263745;
 }
