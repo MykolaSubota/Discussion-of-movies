@@ -8,22 +8,25 @@
      <div id="mov" >
 	  <%= image_tag @movie.image, id:"pic" if @movie.image? %>
      </div>
-  	 <div id="mov-info"
-	  <p><%= @movie.genre%></p>
-	  <p><%= @movie.nation%></p>
-	  <p><%= @movie.year%></p>
-	  <p><%= @movie.director%></p>
-	  <p><%= @movie.actors%></p>
+  	 <div id="mov-info">
+	  <div id="text"><p><%= t "body.genre"%> <%= @movie.genre%></p></div>
+	  <div id="text2"><p><%= t "body.country"%> <%= @movie.nation%></p></div>
+	  <div id="text"><p><%= t "body.year"%> <%= @movie.year%></p></div>
+	  <div id="text2"><p><%= t "body.director"%> <%= @movie.director%></p></div>
+	  <div id="text"><p><%= t "body.actors"%> <%= @movie.actors%></p></div>
 	 </div>
    </div>
     <div id="desc">
+      <h1><%= t "body.description"%></h1>
 	  <p><%= @movie.description %></p>
     </div>
-	<div id="photo"
+    <h1><%= t "body.galery"%></h1>
+	<div id="list"
 	<% if @movie.movie_gallery? %>
   		<ul>
+
     	<% @movie.movie_gallery.each do |img| %>
-      		<%= link_to(image_tag(img.url, alt: 'Image'), img.url, target: '_blank') %>
+      		<div id="photo"><%= link_to(image_tag(img.url, alt: 'Image',id: "pic"), img.url, target: '_blank') %></div>
     	<% end %>
   		</ul>
 	<% end %>
