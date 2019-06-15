@@ -45,10 +45,11 @@
 }
 #title{
 	text-decoration: none;
-	color: #9f9f9f;
+	color: #fff;
 }
 #header{
 	color: #9f9f9f;
+
 }
 #png{
 	height: 40px;
@@ -57,13 +58,48 @@
 #nav{
 	height: 60px;
 	background-color:#263745;
+	position: relative;	
 }
 #head{
 	text-decoration: none;
 }
 #body{
-	background-color:#;
+	background-color:#eff1f4;
+	height: 100%;
+}
+#main_tit{
+	background-color:#5478a1;
 }
 #tit{
 	color:#fff;
+	text-align: center;
+}
+#i{
+	text-decoration: none;
+	color:#fff;
+}
+#main_divy{
+	background-color: #f0f0f0;
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#top-info{
+	display: block;
+	height: 30%;	
+	    box-sizing: border-box;
+}
+#mov{
+	display: block;
+	width: 25.7%;
+    float: left;
+    background-color:#263745;
+    padding: 10px;
+}
+#mov-info{
+	display: block;
+	width: 74.3%;
+}
+#desc{
+	width: 100%;
 }

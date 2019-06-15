@@ -1,20 +1,29 @@
-<%= stylesheet_link_tag 'application', media: 'all' %>
-<h1 ><%= @movie.title %></h1>
-<%= image_tag @movie.image if @movie.image? %>
-<p>Жанр: <%= @movie.genre%></p>
-<p> <%= @movie.nation %></p>
-<p> <%= @movie.year %></p>
-<p> <%= @movie.actors %></p>
-<p><%= @movie.director %></p>
-<p><%= @movie.description %></p>
 
-<% if @movie.movie_gallery? %>
-  <ul>
-    <% @movie.movie_gallery.each do |img| %>
-      <%= link_to(image_tag(img.url, alt: 'Image'), img.url, target: '_blank') %>
-    <% end %>
-  </ul>
-<% end %>
+<%= stylesheet_link_tag 'application', media: 'all' %>
+  <div id="main_tit">
+  	<h1 id="tit"><%= @movie.title %></h1>
+  </div>
+  <div id="main_divy">
+   <div id="top-info">
+     <div id="mov" >
+	  <%= image_tag @movie.image, id:"pic" if @movie.image? %>
+     </div>
+  	 <div id="mov-info"
+	  <p><%= @movie.genre%></p>
+	 </div>
+   </div>
+    <div id="desc">
+	  <p><%= @movie.description %></p>
+    </div>
+	<div id="photo"
+	<% if @movie.movie_gallery? %>
+  		<ul>
+    	<% @movie.movie_gallery.each do |img| %>
+      		<%= link_to(image_tag(img.url, alt: 'Image'), img.url, target: '_blank') %>
+    	<% end %>
+  		</ul>
+	<% end %>
+	</div>
 <hr>
 <h2><%= t "body.discussions"%></h2>
 <% @movie.impressions.each do |impression| %>
@@ -34,3 +43,4 @@
 		<%= f.submit t "body.add" %>
 	</p>
 <% end %>
+</div>

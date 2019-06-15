@@ -2,10 +2,10 @@
 
   <ul class="navbar-nav mr-auto">
     <%= link_to movies_path, class: "nav-link " do%>
-      <i id="i" class="fas nav-link active-primary fa-sign-in-alt "><%= image_tag 'pop.png', id:"png" %><%= t "header.main"%></i> 
+      <i  class="fas nav-link active-primary fa-sign-in-alt "><%= image_tag 'pop.png', id:"png" %><i id="i"><%= t "header.main"%></i></i> 
     <% end %>
   </ul>
-  <%= link_to_unless_current "EN" , locale: "en"%>|<%= link_to_unless_current "UA" , locale: "ua"%>
+  <i id="i"><%= link_to_unless_current "EN" , locale: "en"%></i>|<i id="i"><%= link_to_unless_current "UA" , locale: "ua"%></i>
   <% if user_signed_in? %>
     <%= link_to destroy_user_session_path, class: "nav-link " , method: :delete do %>
       <i  class="btn btn-outline-primary text-light">
