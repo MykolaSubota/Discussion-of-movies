@@ -11,6 +11,20 @@ ActiveAdmin.register Movie do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-permit_params :title, :description, :genre
+permit_params :title, :description, :genre, :image, :year, :nation, :director, :actors, movie_gallery: []
+form do |f|
+  f.inputs do
+  	f.input :title
+  	f.input :description
+  	f.input :genre
+  	f.input :year
+  	f.input :nation
+  	f.input :director
+  	f.input :actors  
+  	f.input :image
+    f.input :movie_gallery, as: :file, input_html: { multiple: true }
+  end
+  f.actions
+end
 end
 
