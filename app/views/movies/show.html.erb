@@ -26,7 +26,9 @@
   		<ul>
 
     	<% @movie.movie_gallery.each do |img| %>
-      		<div id="photo"><%= link_to(image_tag(img.url, alt: 'Image',id: "pic"), img.url, target: '_blank') %></div>
+      		<div id="photo">
+      		<%= link_to(image_tag(img.url, alt: 'Image',id: "pic"), img.url, target: '_blank',data: {lightbox: "img.url"})%>
+      		</div>
     	<% end %>
   		</ul>
 	<% end %>
