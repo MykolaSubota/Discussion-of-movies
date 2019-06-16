@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190615102612) do
+ActiveRecord::Schema.define(version: 20190616091853) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20190615102612) do
     t.string "image"
     t.string "movie_gallery"
     t.integer "year"
+    t.string "country"
     t.string "director"
     t.string "actors"
     t.string "nation"
@@ -68,8 +69,10 @@ ActiveRecord::Schema.define(version: 20190615102612) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end
