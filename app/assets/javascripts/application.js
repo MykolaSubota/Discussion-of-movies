@@ -17,5 +17,3 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require lightbox
-
-  lightbox.init()
