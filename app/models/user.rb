@@ -3,6 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :movies
-  
+
+  validates :username, presence: true, length: { minimum: 5, maximum: 20 },
+                                    format: { with: /\A[a-zA-Z0-9_\-]+\z/ },
+                                    uniqueness: { case_sensitive: false }
 end
