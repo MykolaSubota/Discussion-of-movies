@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
   <head>
     <title><%= t "body.main"%></title>
     <%= csrf_meta_tags %>
@@ -9,9 +9,9 @@
   </head>
 
   <body id="body">
-
   	<%= render 'layouts/header' %>
-
     <%= yield %>
+    
   </body>
+<div id="footer"><%= render 'layouts/footer' %></div>
 </html>

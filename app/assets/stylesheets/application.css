@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require lightbox
  */
 #impression_body{
 	width:500px;
@@ -65,7 +66,11 @@
 }
 #body{
 	background-color:#eff1f4;
-	height: 100%;
+	min-height: 700px;
+}
+#html{
+
+	min-height: 700px;
 }
 #main_tit{
 	background-color:#5478a1;
@@ -83,23 +88,42 @@
     min-width: 320px;
     max-width: 1200px;
     margin: 0 auto;
+    height: 100%;
 }
 #top-info{
-	display: block;
-	height: 30%;	
-	    box-sizing: border-box;
+	display: flex;
+	height: 50%;	
+	box-sizing: border-box;
 }
 #mov{
-	display: block;
-	width: 25.7%;
+	width: 30%;
     float: left;
     background-color:#263745;
     padding: 10px;
 }
 #mov-info{
-	display: block;
-	width: 74.3%;
+	width: 70%;
+	background-color: #f0f0f0;
 }
 #desc{
 	width: 100%;
+}
+#photo{
+	margin-left: 5px;
+	width: 20%;
+}
+#list{
+	display: flex;
+}
+#text{
+	padding: 15px;
+	background-color: #b3b3b3;
+}
+#text2{
+	padding: 15px;
+}
+#footer{
+	margin-top: 20px;
+	background-color:#263745;
+	flex: 0 0 auto;
 }
