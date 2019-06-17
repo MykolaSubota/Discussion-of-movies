@@ -8,4 +8,5 @@ class User < ApplicationRecord
                                     format: { with: /\A[a-zA-Z0-9_\-]+\z/ },
                                     uniqueness: { case_sensitive: false }
   mount_uploader :avatar, AvatarUploader
+  has_many :impressions
 end

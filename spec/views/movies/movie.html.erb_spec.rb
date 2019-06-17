@@ -11,5 +11,5 @@ let!(:user) { build(:user, email: "test@gmail.com", username: "username") }
   it "should have an username" do
     expect(user.username).to_not eq(nil)
   end
-
+ 
 end
