@@ -1,12 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject{
-    build(:user)
-  }
+  let!(:user){create(:user)}
+  
+
     describe "validation" do
-    it "is valid with valid attributes" do
-      expect(subject).to be_valid
-    end
+    it "should have a username" do
+    expect(user.username).to_not eq(nil)
+  end	
+
+  end
+  describe "associations" do
+    it { should have_many(:impressions)}
   end
 end
