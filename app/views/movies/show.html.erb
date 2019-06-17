@@ -37,6 +37,8 @@
 <h2><%= t "body.discussions"%></h2>
 <% @movie.impressions.each do |impression| %>
 <div>
+	<%= image_tag impression.user.avatar %>
+	<p><%= impression.user.username %></p>
 	<p> <%= impression.body %></p>
 </div>
 <% end %>
