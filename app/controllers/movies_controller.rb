@@ -3,7 +3,7 @@ class MoviesController < ApplicationController
 	before_action :authenticate_user!, exept: [:index, :show]
 
 
-	before_action :set_movie, only: [:show]
+	before_action :set_movie, only: [:show, :upvote, :downvote]
 
 
 	def index
@@ -27,6 +27,15 @@ class MoviesController < ApplicationController
 		
 	end
 	
+	def upvote
+		@movie.upvote_from current_user
+		redirect_to movies_path
+	end
+
+	def downvote
+		@movie.downvote_from current_user
+		redirect_to movies_path
+	end
 
 private
 

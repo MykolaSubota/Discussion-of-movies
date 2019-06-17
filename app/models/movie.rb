@@ -1,4 +1,5 @@
 class Movie < ApplicationRecord
+	acts_as_votable
 	mount_uploader :image, ImageUploader
 	mount_uploaders :movie_gallery, ImageUploader
   	serialize :movie_gallery, JSON
