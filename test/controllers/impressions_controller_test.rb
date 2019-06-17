@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class ImpressionsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  setup do
+    @movie = movies(:one)
+  end
+  test "should get index" do
+    get impressions_url
+    assert_response :success
+  end
 end
