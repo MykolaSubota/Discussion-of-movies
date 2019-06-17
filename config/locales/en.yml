@@ -6,6 +6,7 @@ en:
     signup: "Sign Up"
     repass: "Forgot your password?"
     request: "Send me reset password instructions"
+    setings: "Setings"
   body:
     main: "Discussions Of Movies"
     discussions: "All discussions"
@@ -21,4 +22,10 @@ en:
     description: "Description:"
     galery: "Galery:"
     developed: "Developed by:"
+    update: "Update"
+    cancel: "Cancel my account"
+    unhappy: "Unhappy?"
+    confirm: "Are you sure?"
+    back: "Back"
+    
 

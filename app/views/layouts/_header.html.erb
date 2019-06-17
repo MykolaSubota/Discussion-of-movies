@@ -7,6 +7,10 @@
   </ul>
   <i id="i"><%= link_to_unless_current "EN" , locale: "en"%></i>|<i id="i"><%= link_to_unless_current "UA" , locale: "ua"%></i>
   <% if user_signed_in? %>
+    <%= link_to edit_user_registration_path, class: "nav-link " do %>
+    <i  class="btn btn-outline-primary text-light">
+      <%= show_svg('edit.svg') %><%= t "header.setings"%></i> 
+    <% end %>
     <%= link_to destroy_user_session_path, class: "nav-link " , method: :delete do %>
       <i  class="btn btn-outline-primary text-light">
       <%= show_svg('logout.svg') %><%= t "header.logout"%></i> 
