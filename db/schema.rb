@@ -55,7 +55,6 @@ ActiveRecord::Schema.define(version: 20190616091853) do
     t.string "image"
     t.string "movie_gallery"
     t.integer "year"
-    t.string "country"
     t.string "director"
     t.string "actors"
     t.string "nation"

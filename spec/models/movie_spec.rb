@@ -3,11 +3,7 @@ require 'rails_helper'
 RSpec.describe Movie, type: :model do
  let!(:user){create(:user)}
 
-
   context "validation" do
-    it "is valid with valid attributes" do
-      expect(subject).to be_valid
-    end
 
     it "should not be valid without title" do
        subject.title = nil
