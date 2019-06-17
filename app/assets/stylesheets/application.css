@@ -33,6 +33,7 @@
 	flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    min-width: 1000px;
 }
 #main_title{
 	display: block;
@@ -126,4 +127,14 @@
 	margin-top: 20px;
 	background-color:#263745;
 	flex: 0 0 auto;
+}
+#impr{
+	display: flex;	
+	box-sizing: border-box;
+}
+#pad{
+	margin-left: 5px;	
+}
+#impress{
+	background-color: #b3b3b3;
 }
