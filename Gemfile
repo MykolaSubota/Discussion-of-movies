@@ -37,6 +37,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'devise'
 gem 'activeadmin'
 gem 'carrierwave', '~> 1.0'
+gem 'acts_as_votable', '~> 0.12.0'
 
 group :development, :test do
     gem 'railroady'

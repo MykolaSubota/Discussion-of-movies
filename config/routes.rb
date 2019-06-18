@@ -8,7 +8,13 @@ Rails.application.routes.draw do
 		resources :movies do
 		resources :impressions
 
-end  
+end
+    resources :movies do
+      member do
+        put "like" => "movies#upvote"
+        put "unlike" => "movies#downvote"
+      end
+    end  
 end
 	get '*path', to: redirect("/#{I18n.default_locale}/%{path}")
    get '', to: redirect("/#{I18n.default_locale}")
