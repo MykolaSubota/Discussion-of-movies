@@ -1,13 +1,27 @@
-<%= javascript_include_tag 'application' %>
+	<%= javascript_include_tag 'application' %>
 <%= stylesheet_link_tag 'application', media: 'all' %>
   <div id="main_tit">
   	<h1 id="tit"><%= @movie.title %></h1>
   </div>
   <div id="main_divy">
    <div id="top-info">
+    <div id="movnlik">
      <div id="mov" >
 	  <%= image_tag @movie.image, id:"pic" if @movie.image? %>
-     </div>
+     </div >
+     <div id="likes">
+       <%= link_to like_movie_path(@movie), method: :put do %>
+   		<div id="upvote">
+		 <%= show_svg('like.svg')%><%=link_to @movie.get_upvotes.size %>
+        </div>	
+        <%= link_to like_movie_path(@movie), method: :put do %>
+        <div id="downvote">
+		 <%= show_svg('dislike.svg') %><%=link_to @movie.get_downvotes.size %>
+	    </div>
+		<% end %>
+		<% end %>
+	 </div>
+	</div>
   	 <div id="mov-info">
 	  <div id="text"><p><%= t "body.genre"%> <%= @movie.genre%></p></div>
 	  <div id="text2"><p><%= t "body.country"%> <%= @movie.nation%></p></div>
@@ -15,6 +29,7 @@
 	  <div id="text2"><p><%= t "body.director"%> <%= @movie.director%></p></div>
 	  <div id="text"><p><%= t "body.actors"%> <%= @movie.actors%></p></div>
 	 </div>
+
    </div>
     <div id="desc">
       <h1><%= t "body.description"%></h1>
@@ -36,14 +51,17 @@
 <hr>
 <h2><%= t "body.discussions"%></h2>
 <% @movie.impressions.each do |impression| %>
-<div>
+<div id="impress">
+<div id="impr">
 	<% if impression.user.avatar?%>
-			<%= image_tag impression.user.avatar %>
+			<%= image_tag impression.user.avatar, size: "25x25", class:"rounded-circle" %>
 		<% else %>
-			<%= image_tag "avatar.png" %>
+			<%= image_tag "avatar.png", size: "25x25", class:"rounded-circle"%>
 		<% end %>
-	<p><%= impression.user.username %></p>
-	<p> <%= impression.body %></p>
+	<p id="pad"><%= impression.user.username %></p>
+	
+</div>
+<p id="pad2"> <%= impression.body %></p>
 </div>
 <% end %>
 <hr>
