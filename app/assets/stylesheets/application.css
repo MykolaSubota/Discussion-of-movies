@@ -97,7 +97,7 @@
 	box-sizing: border-box;
 }
 #mov{
-	width: 30%;
+	width: 100%;
     float: left;
     background-color:#263745;
     padding: 10px;
@@ -143,4 +143,34 @@ flex-wrap: wrap;
 	flex-wrap: wrap;
 	min-height: 60px;
 	background-color: #b3b3b3;
+}
+#likes{
+	display: flex;
+	width: 100%;
+	background-color:#263745;
+	height: 50px;
+}
+#movnlik{
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+#upvote{
+	padding: 10px 0px 10px 10px;
+	width: 50%;
+	text-align: center
+}
+#upvote:hover {
+    background-color:#71ce3f;
+}
+#downvote{
+	width: 50%;
+	padding: 10px 10px 10px 0px;
+	text-align: center;
+}
+#downvote:hover {
+	background-color:#ba3636;
+}
+
+#ic{
+	margin-right: 5px;
 }

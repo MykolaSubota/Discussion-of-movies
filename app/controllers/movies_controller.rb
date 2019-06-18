@@ -29,12 +29,12 @@ class MoviesController < ApplicationController
 	
 	def upvote
 		@movie.upvote_from current_user
-		redirect_to movies_path
+		redirect_to movie_path
 	end
 
 	def downvote
 		@movie.downvote_from current_user
-		redirect_to movies_path
+		redirect_to movie_path
 	end
 
 private
