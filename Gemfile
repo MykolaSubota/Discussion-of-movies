@@ -36,6 +36,7 @@ gem 'bootstrap', '~> 4.3.1'
 
 gem 'devise'
 gem 'activeadmin'
+gem "paperclip", "~> 6.0.0"
 gem 'carrierwave', '~> 1.0'
 gem 'acts_as_votable', '~> 0.12.0'
 
@@ -49,8 +50,13 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails', '~> 3.8'
+  gem "factory_bot_rails"
+  gem 'shoulda-matchers', '~> 3.1'
 end
-
+group :production do
+  gem 'pg'
+end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
