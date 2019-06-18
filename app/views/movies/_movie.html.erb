@@ -6,6 +6,8 @@
 	<button>
 		<%= movie.get_upvotes.size %>
 	</button>
+	<% end %>
+	<%= link_to unlike_movie_path(movie), method: :put do %>
 	<button>
 		<%= movie.get_downvotes.size %>
 	</button>
