@@ -14,7 +14,7 @@
    		<div id="upvote">
 		 <%= show_svg('like.svg')%><%=link_to @movie.get_upvotes.size %>
         </div>	
-        <%= link_to like_movie_path(@movie), method: :put do %>
+        <%= link_to unlike_movie_path(@movie), method: :put do %>
         <div id="downvote">
 		 <%= show_svg('dislike.svg') %><%=link_to @movie.get_downvotes.size %>
 	    </div>
